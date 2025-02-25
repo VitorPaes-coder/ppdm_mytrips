@@ -5,10 +5,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
@@ -113,10 +115,33 @@ fun TelaLogin(modifier: Modifier = Modifier) {
                 Button(
                     onClick = {},
                     colors = ButtonDefaults.buttonColors(
-                        contentColor = Color(0xFF233EC9)
+                        containerColor = Color(0xFF233EC9)
                     )
                 ) {
-
+                    Text(
+                        text = stringResource(R.string.sign_in)
+                    )
+                    Icon(
+                        imageVector = Icons.Filled.ArrowForward,
+                        contentDescription = ""
+                    )
+                }
+                Row(
+                    modifier = Modifier
+                        .width(200.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = stringResource(R.string.no_account),
+                        fontSize = 14.sp,
+                        color = Color(0x602D2C2C)
+                    )
+                    Text(
+                        text = stringResource(R.string.sign_up),
+                        fontSize = 14.sp,
+                        color = Color(0xFF233EC9),
+                        fontWeight = FontWeight.Bold
+                    )
                 }
             }
         }
